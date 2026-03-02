@@ -18,7 +18,7 @@ package plugins
 
 import constants.Constants
 import io.ktor.server.application.*
-import io.ktor.server.http.content.staticResources
+import io.ktor.server.http.content.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 
@@ -29,8 +29,17 @@ fun Application.configureRouting() {
             enableAutoHeadResponse()
         }
 
+        // http://localhost:8080/beta
+        get("/beta") { call.respondRedirect(Constants.DIRECT_BETA) }
+
         // http://localhost:8080/docs
         get("/docs") { call.respondRedirect(Constants.DOCS_SITE_URL, permanent = true) }
+
+        // http://localhost:8080/github
+        get("/github") { call.respondRedirect(Constants.GITHUB_SITE_URL, permanent = true) }
+
+        // http://localhost:8080/invite
+        get("/invite") { call.respondRedirect(Constants.DIRECT_INVITE) }
 
         // http://localhost:8080/support
         get("/support") { call.respondRedirect(Constants.DIRECT_SUPPORT) }

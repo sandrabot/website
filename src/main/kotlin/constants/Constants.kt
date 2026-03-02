@@ -20,7 +20,10 @@ object Constants {
 
     const val SITE_URL = "https://sandrabot.com"
     const val DOCS_SITE_URL = "https://docs.sandrabot.com"
+    const val GITHUB_SITE_URL = "https://github.com/sandrabot"
 
     const val DIRECT_SUPPORT = "https://discord.gg/BKgmqErg3x"
+    const val DIRECT_INVITE = "https://discord.com/api/oauth2/authorize?client_id=302915036492333067&permissions=8&scope=bot%20applications.commands"
+    const val DIRECT_BETA = "https://discord.com/api/oauth2/authorize?client_id=319951770526941186&permissions=263168&scope=bot%20applications.commands"
 
 }
