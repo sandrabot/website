@@ -2,12 +2,16 @@ body {
     margin: 0;
     height: 100%;
     min-height: 100%;
+    font-size: 14px;
+    line-height: 20px;
     background-clip: border-box;
     -webkit-text-fill-color: inherit;
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow: -moz-scrollbars-none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
-    display: none;
+    display: none; /* Safari and Chrome */
 }
 
 .background {
@@ -16,4 +20,111 @@ body::-webkit-scrollbar {
     height: 100%;
     position: fixed;
     background-image: linear-gradient(180deg, #5865f2, #eb459e);
+}
+
+.nav {
+    position: sticky;
+    padding: 8px 56px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    color: white;
+    background-color: rgba(30, 33, 36, 0.58);
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    float: right;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    transition: color 200ms ease;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+.w-nav-link:hover {
+    color: #eb459e;
+}
+
+.logo {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    transition: text-shadow 200ms ease;
+    font-family: Gugi, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: white;
+}
+
+.logo:hover {
+    text-shadow: 3px 3px 0 #1e2124;
+}
+
+.invite-button {
+    display: flex;
+    padding: 0 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-flex: 0;
+    flex: 0 auto;
+    border-radius: 12px;
+    transition: color 200ms ease, background-color 200ms ease;
+    font-family: Gugi, sans-serif;
+    font-size: 20px;
+    color: white;
+    border: none;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.invite-button:hover {
+    background-color: #57f287;
+    color: #1e2124;
+}
+
+.invite-button:active {
+    border-style: none;
+    border-width: 1px;
+    border-color: #000;
+    background-color: #eb459e;
+}
+
+.invite-button.hidden-on-mobile {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 24px;
+    background-color: #eb459e;
+}
+
+.invite-button.hidden-on-mobile:hover {
+    background-color: #57f287;
+}
+
+a {
+    background-color: transparent;
+    cursor: auto;
+}
+
+a:active a:hover {
+    outline: none;
 }
