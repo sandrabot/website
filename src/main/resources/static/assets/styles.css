@@ -7,11 +7,18 @@ body {
     background-clip: border-box;
     -webkit-text-fill-color: inherit;
     -ms-overflow-style: none; /* IE 10+ */
-    overflow: -moz-scrollbars-none; /* Firefox */
 }
 
 body::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
+}
+
+a {
+    background-color: transparent;
+}
+
+a:active a:hover {
+    outline: none;
 }
 
 .background {
@@ -77,6 +84,9 @@ body::-webkit-scrollbar {
 .invite-button {
     display: flex;
     padding: 0 30px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 24px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     flex-direction: row;
@@ -90,11 +100,10 @@ body::-webkit-scrollbar {
     transition: color 200ms ease, background-color 200ms ease;
     font-family: Gugi, sans-serif;
     font-size: 20px;
+    background-color: #eb459e;
     color: white;
     border: none;
     line-height: inherit;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .invite-button:hover {
@@ -104,27 +113,6 @@ body::-webkit-scrollbar {
 
 .invite-button:active {
     border-style: none;
-    border-width: 1px;
-    border-color: #000;
     background-color: #eb459e;
-}
-
-.invite-button.hidden-on-mobile {
-    margin-top: 6px;
-    margin-bottom: 6px;
-    margin-left: 24px;
-    background-color: #eb459e;
-}
-
-.invite-button.hidden-on-mobile:hover {
-    background-color: #57f287;
-}
-
-a {
-    background-color: transparent;
-    cursor: auto;
-}
-
-a:active a:hover {
-    outline: none;
+    color: white;
 }
