@@ -7,6 +7,7 @@ body {
     background-clip: border-box;
     -webkit-text-fill-color: inherit;
     -ms-overflow-style: none; /* IE 10+ */
+    color: white;
 }
 
 body::-webkit-scrollbar {
@@ -19,6 +20,15 @@ a {
 
 a:active a:hover {
     outline: none;
+}
+
+img {
+    border: none;
+}
+
+h2 {
+    line-height: 36px;
+    font-weight: bold;
 }
 
 .background {
@@ -36,7 +46,6 @@ a:active a:hover {
     top: 0;
     right: 0;
     bottom: auto;
-    color: white;
     background-color: rgba(30, 33, 36, 0.58);
 }
 
@@ -115,4 +124,82 @@ a:active a:hover {
     border-style: none;
     background-color: #eb459e;
     color: white;
+}
+
+.container {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 0;
+    margin: 20px auto 40px;
+    max-width: 940px;
+    display: block;
+    overflow: visible;
+    position: absolute;
+    -webkit-box-flex: 0;
+    -webkit-box-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex: 0 auto;
+}
+
+.sandra {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80vh;
+    padding-top: 0;
+    display: block;
+    max-height: none;
+    max-width: none;
+    min-height: auto;
+    min-width: auto;
+    margin: auto;
+    align-self: auto;
+    object-fit: contain;
+}
+
+.blurb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    margin: auto;
+    padding-top: 0;
+    padding-bottom: 45px;
+    font-family: Gugi, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    text-align: center;
+    text-shadow: 2px 2px 0 #1e2124;
+    object-fit: contain;
+}
+
+.with-love {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    max-height: none;
+    min-height: auto;
+    margin: auto;
+    font-family: Montserrat, sans-serif;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 1px 1px 0 #1e2124;
+    object-fit: contain;
 }
