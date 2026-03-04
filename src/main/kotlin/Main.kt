@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-import io.ktor.server.application.Application
-import plugins.configureSerialization
+import io.ktor.server.application.*
+import plugins.configureLogging
 import plugins.configureRouting
+import plugins.configureSerialization
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused")
 fun Application.module() {
+    configureLogging()
     configureSerialization()
     configureRouting()
 }

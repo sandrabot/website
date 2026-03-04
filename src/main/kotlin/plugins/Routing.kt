@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- * http://www.apache.org/licenses/LICENSE-2.0
+ *     https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -30,7 +30,7 @@ fun Application.configureRouting() {
         }
 
         // http://localhost:8080/beta
-        get("/beta") { call.respondRedirect(Constants.DIRECT_BETA) }
+        get("/beta") { call.respondRedirect(Constants.DIRECT_BETA_INVITE) }
 
         // http://localhost:8080/docs
         get("/docs") { call.respondRedirect(Constants.DOCS_SITE_URL, permanent = true) }
